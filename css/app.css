@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+:root {
+    --colorPrimario: #212121;
+    --colorSecundario: #06fa0f;
+}
+
+body {
+    display: grid;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+        background-color: var(--colorPrimario)
+}
+
+header {
+    grid-area: header;
+    background-image: url("../img/imagen1.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 100%;
+    
+}
+
+main {
+    grid-area: main;
+}
+
+footer {
+    grid-area: footer;
+}
+
+.barNav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logoNav {
+    height: 90px;
+    width: 60px;
+    margin: 15px 0 0 80px;
+}
+
+.pagNav {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-right: 60px;
+}
+
+.pagNav a {
+    position: relative;
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    letter-spacing: 0.5px;
+    margin: 15px;
+}
+
+.pagNav a::after {
+    content: "";
+    position: absolute;
+    background-color: var(--colorSecundario);
+    height: 2px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+}
+
+.pagNav a:hover::after {
+    width: 100%;
+}
+
+.pagNav button {
+    margin-left: 10px;
+}
+
+.botonNav {
+    min-width: 115px;
+    height: 40px;
+    color: var(--colorPrimario);
+    padding: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid var(--colorSecundario);
+    background: var(--colorSecundario);
+}
+
+.botonNav:hover {
+    background: transparent;
+    color: var(--colorSecundario);
+}
+
+.lineaHeader{
+    border-bottom: 1px white;
+    opacity: 15%;
+}
+
+.textoIndex {
+    margin: 100px 0 0 100px;
+    height: 120%;
+}
+
+.titulo {
+    width: 650px;
+    color: white;
+    font-size: 55px;
+    font-family: sans-serif;
+}
+
+.titulo span {
+    color: var(--colorSecundario);
+    font-family: 'Russo One', sans-serif;
+    text-shadow: 2px 2px 2px var(--colorPrimario);
+    letter-spacing: 2px;
+}
+
+.botonInscripcion {
+    margin-top: 20px;
+    min-width: 130px;
+    height: 40px;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    z-index: 0;
+    background: transparent;
+    overflow: hidden;
+    border: 2px solid var(--colorSecundario);
+    color: var(--colorSecundario);
+}
+
+.botonInscripcion:hover {
+    color: var(--colorPrimario);
+}
+
+.botonInscripcion:hover:after {
+    width: 100%;
+}
+
+.botonInscripcion:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    transition: all 0.3s ease;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background: var(--colorSecundario);
+}
+
+.tituloServicios{
+    width: 100%;
+    height: 60px;
+    background-color: var(--colorPrimario);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tituloServicios h2{
+    color: white;
+    width: 241px;
+    text-align: center;
+    margin-top: 20px;
+    padding-bottom: 5px;
+    font-family: sans-serif;
+    border-bottom: 2px solid var(--colorSecundario);
+}
+
+.card{
+    width: 260px;
+    height: 360px;
+    outline: 1px solid #06fa0f;
+    border-radius: 15px;
+    margin: 40px;
+}

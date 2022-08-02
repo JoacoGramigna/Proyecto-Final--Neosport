@@ -1,0 +1,23 @@
+@media screen and (max-width: 1080px) {
+    header{
+        height: 110%;
+    }
+}
+
+@media screen and (max-width: 993px) {
+    header{
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 910px) {
+    header{
+        height: 80%;
+    }
+}
+
+@media screen and (max-width: 810px) {
+    header{
+        height: 70%;
+    }
+}
