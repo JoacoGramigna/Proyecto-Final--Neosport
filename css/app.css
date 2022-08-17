@@ -1,8 +1,9 @@
+/* - General - */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    max-width: 100%;
 }
 
 :root {
@@ -10,30 +11,18 @@
     --colorSecundario: #06fa0f;
 }
 
-body {
-    display: grid;
-    grid-template-areas:
-        "header"
-        "main"
-        "footer";
-        background-color: black;
-}
+/* - INDEX.html - */
 
-header {
-    grid-area: header;
-    background-image: url("../img/imagen1.png");
+.backgroundIndex {
+    background-image: url("../img/imagenIndex.png");
     background-repeat: no-repeat;
-    background-size: 100%;
-    width: 100%;
-    height: 100vh;
-}
-
-main {
-    grid-area: main;
-}
-
-footer {
-    grid-area: footer;
+    background-size: cover;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    z-index: -1;
 }
 
 .barNav {
@@ -45,7 +34,11 @@ footer {
 .logoNav {
     height: 90px;
     width: 60px;
-    margin: 15px 0 0 80px;
+    margin: 15px 0 0 100px;
+}
+
+.logoNav img {
+    max-width: 100%;
 }
 
 .pagNav {
@@ -55,7 +48,7 @@ footer {
     margin-right: 60px;
 }
 
-.pagNav a {
+.pagNav .navEnlances {
     position: relative;
     text-decoration: none;
     font-family: 'Courier New', Courier, monospace;
@@ -64,7 +57,7 @@ footer {
     margin: 15px;
 }
 
-.pagNav a::after {
+.pagNav .navEnlances::after {
     content: "";
     position: absolute;
     background-color: var(--colorSecundario);
@@ -75,7 +68,7 @@ footer {
     transition: 0.3s;
 }
 
-.pagNav a:hover::after {
+.pagNav .navEnlances:hover::after {
     width: 100%;
 }
 
@@ -104,18 +97,19 @@ footer {
     color: var(--colorSecundario);
 }
 
-.lineaHeader{
+.lineaHeader {
     border-bottom: 1px white;
     opacity: 15%;
 }
 
 .textoIndex {
-    margin: 100px 0 0 100px;
-    height: 120%;
+    max-width: 650px;
+    position: absolute;
+    top: 220px;
+    left: 100px;
 }
 
 .titulo {
-    width: 650px;
     color: white;
     font-size: 55px;
     font-family: sans-serif;
@@ -132,16 +126,12 @@ footer {
     margin-top: 20px;
     min-width: 130px;
     height: 40px;
-    color: #fff;
     padding: 5px 10px;
     font-weight: bold;
     cursor: pointer;
     transition: all 0.3s ease;
     position: relative;
-    display: inline-block;
-    outline: none;
     border-radius: 5px;
-    z-index: 0;
     background: transparent;
     overflow: hidden;
     border: 2px solid var(--colorSecundario);
@@ -168,28 +158,158 @@ footer {
     background: var(--colorSecundario);
 }
 
-.tituloServicios{
-    width: 100%;
-    height: 60px;
+/* INSCRIPCION.html */
+
+.backgroundInscripcion {
+    background-image: url(../img/imagenIndex.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.contenedor {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 80vh;
 }
 
-.tituloServicios h2{
-    color: white;
-    width: 241px;
+.formulario {
+    width: 340px;
+    height: 420px;
+    background-color: var(--colorPrimario);
+    outline: 1px solid var(--colorSecundario);
+    border-radius: 10px;
+}
+
+.tituloInscribirse {
     text-align: center;
-    margin-top: 20px;
-    padding-bottom: 5px;
+    margin: 15px;
     font-family: sans-serif;
-    border-bottom: 2px solid var(--colorSecundario);
+    font-size: 15px;
+    color: white;
 }
 
-.card{
-    width: 260px;
-    height: 360px;
-    outline: 1px solid #06fa0f;
-    border-radius: 15px;
-    margin: 40px;
+.inputBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+}
+
+.contenedorBotonConfirmar {
+    display: flex;
+    justify-content: center;
+}
+
+.botonConfirmar {
+    min-width: 110px;
+    height: 40px;
+    color: var(--colorPrimario);
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    overflow: hidden;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--colorSecundario);
+}
+
+.botonConfirmar:hover {
+    border-radius: 5px;
+    padding-right: 24px;
+    padding-left: 8px;
+}
+
+.botonConfirmar:hover:after {
+    opacity: 1;
+    right: 10px;
+}
+
+.botonConfirmar:after {
+    content: "\00BB";
+    position: absolute;
+    opacity: 0;
+    font-size: 20px;
+    line-height: 40px;
+    top: 0;
+    right: -20px;
+    transition: 0.4s;
+}
+
+.tituloFormulario {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-family: sans-serif;
+    font-size: 13px;
+    margin-top: 20px;
+}
+
+.tituloFormulario a {
+    color: var(--colorSecundario);
+}
+
+input {
+    background-color: transparent;
+    outline: none;
+    color: white;
+    border: none;
+    border-bottom: 1px solid var(--colorSecundario);
+    width: 250px;
+    margin: 10px;
+    padding-bottom: 10px;
+    font-size: 15px;
+}
+
+/* JAVASCRIPT DOM */
+
+.contenedorTitulos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.tituloAgradecimiento {
+    color: white;
+    font-family: sans-serif;
+    font-size: 45px;
+}
+
+.tituloEnlace {
+    color: white;
+    font-family: sans-serif;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.tituloEnlace a {
+    color: var(--colorSecundario);
+}
+
+.tituloConfirmacion {
+    color: white;
+    font-family: sans-serif;
+    font-size: 35px;
+}
+
+.confirmacionEdit {
+    color: var(--colorSecundario);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-shadow: 2px 2px 2px var(--colorPrimario);
+}
+
+.formularioInicio {
+    width: 340px;
+    height: 280px;
+    background-color: var(--colorPrimario);
+    outline: 1px solid var(--colorSecundario);
+    border-radius: 10px;
 }
