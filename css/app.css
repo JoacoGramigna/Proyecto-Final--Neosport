@@ -313,3 +313,23 @@ input {
     outline: 1px solid var(--colorSecundario);
     border-radius: 10px;
 }
+
+.timezone{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 40px;
+    bottom: 40px;
+}
+
+.timezone h2{
+    color:  white;
+    font-family: sans-serif;
+    font-size: 20px;
+}
+
+.timezone span{
+    color:  var(--colorSecundario);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+}

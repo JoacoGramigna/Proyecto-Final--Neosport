@@ -1,20 +1,42 @@
-// - Const/Getters
+// - Const / Gets.
 
 const botonInicio = document.getElementById("boton_inicio");
 const correoInicio = document.getElementById("correo_usuario_inicio");
 const contraseñaInicio = document.getElementById("contraseña_usuario_inicio");
 
-// - Evento / Boton iniciar sesion
+// - Evento / Boton iniciar sesion.
 
-botonInicio.addEventListener("click", function () {
+botonInicio.addEventListener("click", function (e) {
+    e.preventDefault();
+
     let correoInicio = localStorage.getItem("correo");
     let contraseñaInicio = localStorage.getItem("contraseña");
 
-    if (correoInicio === correo_usuario_inicio.value & contraseñaInicio === contraseña_usuario_inicio.value){
-        document.body.innerHTML = `<h1>Iniciaste sesion</h1>`;
+    if (correoInicio === correo_usuario_inicio.value & contraseñaInicio === contraseña_usuario_inicio.value) {
+        Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: '<h4>Iniciaste sesion</h4>',
+            showConfirmButton: true,
+            timer: 3000
+        })
     }
-
-    else if (correoInicio !== correo_usuario_inicio.value || contraseñaInicio !== contraseña_usuario_inicio.value){
-        document.body.innerHTML = `<h1>No iniciaste sesion</h1>`;
+    else if (correoInicio === correo_usuario_inicio.value & contraseñaInicio !== contraseña_usuario_inicio.value) {
+        Swal.fire({
+            position: 'center',
+            icon: 'error',
+            title: '<h4>Contraseña incorrecta vuelve a intentarlo</h4>',
+            showConfirmButton: true,
+            timer: 3000
+        })
+    }
+    else if (correoInicio !== correo_usuario_inicio.value || contraseñaInicio !== contraseña_usuario_inicio.value) {
+        Swal.fire({
+            position: 'center',
+            icon: 'error',
+            title: '<h4>Correo invalido o necesitas <a href="../pages/inscripcion.html">inscribirte</a>.</h4>',
+            showConfirmButton: true,
+            timer: 3000
+        })
     }
 })
