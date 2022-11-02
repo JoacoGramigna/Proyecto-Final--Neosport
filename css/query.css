@@ -1,0 +1,91 @@
+@media screen and (max-width: 900px) {
+    .navbar {
+        padding: 0;
+    }
+
+    .navbar .logo {
+        position: absolute;
+        top: 30px;
+        left: 80px;
+        z-index: 2;
+    }
+
+    .navbar .menu-hamburger {
+        display: block;
+        position: absolute;
+        z-index: 1;
+    }
+
+    .nav-links {
+        top: 0;
+        left: 0;
+        position: absolute;
+        background-color: rgb(255, 255, 255, 0.20);
+        backdrop-filter: blur(8px);
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: -100%;
+        transition: all 0.5s ease;
+    }
+
+    .mobile-menu {
+        margin-left: 0;
+        z-index: 1;
+    }
+
+    .nav-links ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar .nav-links ul li {
+        margin: 25px 0;
+        font-size: 1.2rem;
+    }
+
+    .botonNav{
+        top: 50px;
+        right: 100px;
+        position: absolute;
+        z-index: 1;
+    }
+}
+
+@media screen and (max-width: 830px) {
+    .textoIndex{
+        top: 180px;
+    }
+    .timezone h2{
+        font-size: 15px;
+    }
+    .timezone span{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 620px) {
+
+}
+
+@media screen and (max-width: 548px) {
+    .timezone {
+        bottom: 20px;
+    }
+    .navbar .logo{
+        width: 60px;
+        height: 70px;
+        top: 30px;
+        left: 50px;
+    }
+}
+
+@media screen and (max-width: 410px) {
+    .navbar .logo{
+        top: 30px;
+        left: 50px;
+    }
+}

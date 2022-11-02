@@ -4,6 +4,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
 }
 
 :root {
@@ -13,51 +15,44 @@
 
 /* - INDEX.html - */
 
-.backgroundIndex {
-    background-image: url("../img/imagenIndex.png");
-    background-repeat: no-repeat;
+header {
+    height: 100vh;
+    width: 100vw;
+    background-image: url(/img/imagenIndex.png);
     background-size: cover;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+}
+
+.navbar {
     position: absolute;
-    z-index: -1;
-}
-
-.barNav {
+    padding: 30px 80px 30px 80px;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-}
-
-.logoNav {
-    height: 90px;
-    width: 60px;
-    margin: 15px 0 0 100px;
-}
-
-.logoNav img {
-    max-width: 100%;
-}
-
-.pagNav {
-    list-style: none;
-    display: flex;
     align-items: center;
-    margin-right: 60px;
+    width: 100%;
 }
 
-.pagNav .navEnlances {
+.navbar a {
+    color: white;
+}
+
+.navbar .logo{
+    width: 70px;
+    height: 80px;
+}
+
+.navbar .nav-links ul {
+    display: flex;
+}
+
+.navbar .nav-links ul li {
     position: relative;
-    text-decoration: none;
     font-family: 'Courier New', Courier, monospace;
     color: white;
     letter-spacing: 0.5px;
     margin: 15px;
 }
 
-.pagNav .navEnlances::after {
+.navbar .nav-links ul li::after {
     content: "";
     position: absolute;
     background-color: var(--colorSecundario);
@@ -68,12 +63,23 @@
     transition: 0.3s;
 }
 
-.pagNav .navEnlances:hover::after {
+.navbar .nav-links ul li:hover::after {
     width: 100%;
 }
 
-.pagNav button {
-    margin-left: 10px;
+.navbar .nav-links ul li.active a {
+    color: var(--colorSecundario);
+    font-weight: 600;
+}
+
+.navbar .menu-hamburger {
+    display: none;
+    position: absolute;
+    top: 57px;
+    right: 50px;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
 }
 
 .botonNav {
@@ -97,16 +103,12 @@
     color: var(--colorSecundario);
 }
 
-.lineaHeader {
-    border-bottom: 1px white;
-    opacity: 15%;
-}
-
 .textoIndex {
     max-width: 650px;
     position: absolute;
     top: 220px;
     left: 100px;
+    right: 100px;
 }
 
 .titulo {
@@ -320,6 +322,7 @@ input {
     position: absolute;
     right: 40px;
     bottom: 40px;
+    padding-left: 40px;
 }
 
 .timezone h2{
