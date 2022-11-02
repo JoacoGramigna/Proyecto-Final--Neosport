@@ -162,13 +162,6 @@ header {
 
 /* INSCRIPCION.html */
 
-.backgroundInscripcion {
-    background-image: url(../img/imagenIndex.png);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
 .contenedor {
     display: flex;
     justify-content: center;
