@@ -67,7 +67,7 @@
 
 @media screen and (max-width: 830px) {
     .textoIndex {
-        top: 180px;
+        top: 160px;
     }
 
     .timezone h2 {
@@ -104,7 +104,7 @@
     }
 
     .contenedorTitulos h2{
-        font-size: 7px;
+        font-size: 12px;
     }
 }
 
