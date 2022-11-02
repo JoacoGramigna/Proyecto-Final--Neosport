@@ -8,25 +8,26 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.28/dist/sweetalert2.all.min.js"></script>
     <title>Neo Sport Fitness - Iniciar sesion</title>
     <link rel="stylesheet" href="../css/app.css">
+    <link rel="stylesheet" href="../css/query.css">
     <link rel="icon" href="../img/neosportimg2.png">
     <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
 </head>
 
 <body class="backgroundInscripcion">
-    <header>
-        <nav class="barNav">
-            <div class="logoNav">
-                <img src="../img/neosportimg2.png">
-            </div>
-            <ul class="pagNav">
-                <li><a class="navEnlances" href="../index.html">Inicio</a></li>
-                <li><a class="navEnlances" href="">Nosotros</a></li>
-                <li><a class="navEnlances" href="">Servicios</a></li>
+    <nav class="navbar">
+        <img class="logo" src="../img/neosportimg2.png">
+        <div class="nav-links">
+            <ul>
+                <li class="active"><a href="../index.html">Inicio</a></li>
+                <li><a href="">Nosotros</a></li>
+                <li><a href="">Servicios</a></li>
             </ul>
-        </nav>
-        <hr class="lineaHeader"></hr>
-    </header>
-    <main>
+        </div>
+            <a href="../pages/iniciosesion.html"><button class="botonNav">Iniciar Sesión</button></a>
+            <img src="../img/menu-btn.png" alt="menu hamburger" class="menu-hamburger">
+    </nav>
+
+    <header>
         <section class="contenedor">
             <form class="formularioInicio">
                 <div class="tituloInscribirse">
@@ -44,7 +45,7 @@
                 <h2 class="tituloFormulario">Si no estas registrado dirigite a <a href="../pages/inscripcion.html"> Inscribirme</a>.</h2>
             </form>
         </section>
-    </main>
+    </header>
 
     <script src="../js/app2.js"></script>
     <script src="../js/general.js"></script>
