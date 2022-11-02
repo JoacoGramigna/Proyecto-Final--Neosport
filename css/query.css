@@ -1,3 +1,13 @@
+@media screen and (max-width: 1020px) {
+    .contenedorTitulos h1{
+        font-size: 30px;
+    }
+
+    .contenedorTitulos h2{
+        font-size: 15px;
+    }
+}
+
 @media screen and (max-width: 900px) {
     .navbar {
         padding: 0;
@@ -47,7 +57,7 @@
         font-size: 1.2rem;
     }
 
-    .botonNav{
+    .botonNav {
         top: 50px;
         right: 100px;
         position: absolute;
@@ -56,35 +66,50 @@
 }
 
 @media screen and (max-width: 830px) {
-    .textoIndex{
+    .textoIndex {
         top: 180px;
     }
-    .timezone h2{
+
+    .timezone h2 {
         font-size: 15px;
     }
-    .timezone span{
+
+    .timezone span {
         font-size: 15px;
     }
-}
 
-@media screen and (max-width: 620px) {
+    .contenedorTitulos h1{
+        font-size: 20px;
+    }
 
+    .contenedorTitulos h2{
+        font-size: 10px;
+    }
 }
 
 @media screen and (max-width: 548px) {
     .timezone {
         bottom: 20px;
     }
-    .navbar .logo{
+
+    .navbar .logo {
         width: 60px;
         height: 70px;
         top: 30px;
         left: 50px;
     }
+
+    .contenedorTitulos h1{
+        font-size: 15px;
+    }
+
+    .contenedorTitulos h2{
+        font-size: 7px;
+    }
 }
 
 @media screen and (max-width: 410px) {
-    .navbar .logo{
+    .navbar .logo {
         top: 30px;
         left: 50px;
     }

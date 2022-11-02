@@ -40,7 +40,24 @@ boton.addEventListener("click", function (e) {
     localStorage.setItem("correo", correo.value);
     localStorage.setItem("contraseña", contraseña.value);
 
-    document.body.innerHTML = `<div class="contenedorTitulos">
+    document.body.innerHTML =
+    `
+    <nav class="navbar">
+    <img class="logo" src="../img/neosportimg2.png">
+    <div class="nav-links">
+        <ul>
+            <li class="active"><a href="../index.html">Inicio</a></li>
+            <li><a href="">Nosotros</a></li>
+            <li><a href="">Servicios</a></li>
+        </ul>
+    </div>
+    <a href="../pages/iniciosesion.html"><button class="botonNav">Iniciar Sesión</button></a>
+    <img src="../img/menuboton.png" alt="menu hamburger" class="menu-hamburger">
+</nav>
+    <header>
+    <div class="contenedorTitulos">
     <h1 class="tituloAgradecimiento">${nombre.value}, Gracias por confiar en <span class="confirmacionEdit">NEO SPORT</span></h1>
-    <h2 class="tituloEnlace">Dirigete a <a href="../index.html">Inicio</a> o Inicia sesión en <a href="../pages/iniciosesion.html">Click aca</a>.</h2></div>`;
+    <h2 class="tituloEnlace">Dirigete a <a href="../index.html">Inicio</a> o Inicia sesión en <a href="../pages/iniciosesion.html">Click aca</a>.</h2></div>
+    </header>
+    `;
 })
